@@ -108,7 +108,7 @@
 // {
 //     if(array[i] % 2 == 0)
 //     {
-//        Console.Write($" {array[i]} "); 
+//        Console.Write($" {" array[i]} "); 
 //     }
 //     // i = i + 1;
 //     i++;
@@ -129,3 +129,38 @@
 //     i++;
 // }
 // Console.WriteLine(max);
+
+
+
+//Создание массива и вывод в терминал его содержимого.
+
+// int[] CreateRandomArray(int size, int min, int max)
+// {
+//     int[]array = new int[size];
+//     Random random = new Random();
+//     for(int i = 0; i < array.Length;i++)
+//     {
+//         array[i] = random.Next(min, max + 1);
+//     }
+//     return array;
+// }
+
+// void PrintArray(int[]array)
+// {
+//     for(int i = 0; i < array.Length; i++)
+//     {
+//         System.Console.Write(array[i] +" ");
+//     }
+//     System.Console.WriteLine();
+// }
+ 
+
+//  System.Console.WriteLine("Input size of array: ");
+//  int size = Convert.ToInt32(Console.ReadLine());
+//  System.Console.WriteLine("Input minimal value of array element: ");
+//  int min = Convert.ToInt32(Console.ReadLine());
+//  System.Console.WriteLine("Input maximal value of array element: ");
+//  int max = Convert.ToInt32(Console.ReadLine());
+
+//  int[] myArray = CreateRandomArray(size, min, max);
+//  PrintArray(myArray);
