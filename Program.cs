@@ -133,6 +133,7 @@
 
 
 //Создание массива и вывод в терминал его содержимого.
+// проверить число n присутствует в массиве или нет.
 
 // int[] CreateRandomArray(int size, int min, int max)
 // {
@@ -153,6 +154,18 @@
 //     }
 //     System.Console.WriteLine();
 // }
+
+// bool SearchNum(int[] array, int num)
+// {
+//   for(int i = 0; i < array.Length; i++) 
+//    {
+//         if(array[i] == num)
+//         {
+//             return true;
+//         }
+//    }
+//    return false;
+// }
  
 
 //  System.Console.WriteLine("Input size of array: ");
@@ -162,5 +175,11 @@
 //  System.Console.WriteLine("Input maximal value of array element: ");
 //  int max = Convert.ToInt32(Console.ReadLine());
 
+ 
+
 //  int[] myArray = CreateRandomArray(size, min, max);
 //  PrintArray(myArray);
+
+//  System.Console.WriteLine("Input number: ");
+//  int num = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine(SearchNum(myArray, num));
