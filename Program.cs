@@ -243,9 +243,26 @@
 // первый и последний элемент,второй и предпоследний и т.д.
 // Результат записать в новый массив.
 
-   
-        
- 
+
+//Напишите программу,которая принимает на вход число,
+//и выдает колличество цыфр в числе.
 
 
+// using System.Globalization;
+
+// int DigitCounter(int num)
+// {
+//     int counter = 0;
+//     while (num > 0)
+//     {
+//         num /=10;
+//         counter++;
+//     }
+//     return counter;
+// }
+
+
+// System.Console.WriteLine("Input number: ");
+//  int num = Convert.ToInt32(Console.ReadLine());
  
+//  System.Console.WriteLine(DigitCounter(num));
