@@ -277,34 +277,81 @@
 // Cоздали массив и заполнили его значениями с клавиатуры.
 
 
-int[] InputArray(int size)
-{
-    int[] arr = new int [size];
+// int[] InputArray(int size)
+// {
+//     int[] arr = new int [size];
     
-    for(int i = 0; i < arr.Length; i++)
-    {
-        System.Console.Write($"Input {i+1} number: ");
-        arr[i] = Convert.ToInt32(Console.ReadLine());
-    }
-    return arr;
-}
+//     for(int i = 0; i < arr.Length; i++)
+//     {
+//         System.Console.Write($"Input {i+1} number: ");
+//         arr[i] = Convert.ToInt32(Console.ReadLine());
+//     }
+//     return arr;
+// }
 
 
-int ArrayCounter (int[] arr)
-{
-    int count = 0;
-    for(int i = 0; i < arr.Length; i++)
-    {
-        if(arr[i] % 10 == 1 && arr[i] % 7 == 0)
-        {
-            count++;
-        }
-    }
-    return count;
-}
+// int ArrayCounter (int[] arr)
+// {
+//     int count = 0;
+//     for(int i = 0; i < arr.Length; i++)
+//     {
+//         if(arr[i] % 10 == 1 && arr[i] % 7 == 0)
+//         {
+//             count++;
+//         }
+//     }
+//     return count;
+// }
 
-Console.WriteLine("Input array size: ");
-int size = Convert.ToInt32(Console.ReadLine()); 
+// Console.WriteLine("Input array size: ");
+// int size = Convert.ToInt32(Console.ReadLine()); 
 
-int[] arr = InputArray(size);
-System.Console.WriteLine(ArrayCounter (arr));
+// int[] arr = InputArray(size);
+// System.Console.WriteLine(ArrayCounter (arr)); 
+
+
+//Заполните массив из N случайных чисел,(вводится с консоли  не более 8)
+// 0т 0 до 9.Сформируйте целое число,
+ // которое будет состоять из чисел из массива.Старший разряд числа
+ // находится на нулевом индексе, младший на последнем.
+ // пример: [1 4 5 2 6] => 14526
+
+// int[] CreateRandomArray(int size)
+// {
+//     int[]array = new int[size];
+//     Random random = new Random();
+//     for(int i = 0; i < array.Length;i++)
+//     {
+//         array[i] = random.Next(0 , 9 + 1);
+//     }
+//     return array;
+// }
+
+
+// void PrintArray(int[]array)
+// {
+//     for(int i = 0; i < array.Length; i++)
+//     {
+//         System.Console.Write(array[i] +" ");
+//     }
+//     System.Console.WriteLine();
+// }
+
+// int NumberOfArray(int[] array)
+// {
+//     int number = 0;
+//     for(int i = 0; i < array.Length; i++)
+//     {
+//         number +=array[i] * (int)(Math.Pow(10,array.Length-i-1));
+//     }
+//     return number;
+// }
+// Console.WriteLine("Input size of array: ");
+//  int size = Convert.ToInt32(Console.ReadLine());
+
+
+
+// int[] myArray = CreateRandomArray(size);
+// int result = NumberOfArray(myArray);
+//  PrintArray(myArray);
+// Console.WriteLine(result);
