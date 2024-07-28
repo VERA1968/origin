@@ -355,3 +355,65 @@
 // int result = NumberOfArray(myArray);
 //  PrintArray(myArray);
 // Console.WriteLine(result);
+
+
+
+//ДВУМЕРНЫЕ МАССИВЫ
+
+//создание и заполнение двумерного массива.
+
+// int[,] matrix = new int [3, 5];
+
+// Random random = new Random();
+// for (int i = 0; i < matrix.GetLength(0); i++)
+// {
+//     for (int j = 0; j < matrix.GetLength(1); j++)
+//     {
+//         matrix[i, j] = random.Next(1, 11);
+//     }
+// }
+// //Вывод массива на экран.
+
+// for (int i = 0; i < matrix.GetLength(0); i++)
+// {
+//     for (int j = 0; j < matrix.GetLength(1); j++)
+//     {
+//         Console.Write($"{matrix[i, j]} ");
+//     }
+//     Console.WriteLine();
+// }
+
+
+// ЗАПОЛНЕНИЕ И ВЫВОД ДВУМЕРНОГО МАССИВА С ПРИМЕНЕНИЕ ФУНКЦИИ.
+
+// int[,] CreateMatrix (int rowCount, int columsCount)  //функция
+// {
+//     int[,] matrix = new int [rowCount,columsCount];
+
+//     Random random = new Random();
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             matrix[i, j] = random.Next(1, 11);
+//         }    
+//     }
+//     return matrix;
+// }
+
+// // код для вывода массива на экран в виде функции.
+
+// void ShowMatrix(int[,] matrix)
+// {
+//    for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             Console.Write($"{matrix[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     } 
+// }
+
+// int[,] matrix = CreateMatrix(5,8);
+// ShowMatrix(matrix);
