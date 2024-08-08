@@ -583,35 +583,71 @@
 
 //     }
 // }  
+
+
+// Cоздание и заполнение двумерного массива.
+
+//Задайте двумерный массив. Найдите элементы у которых оба
+//индекса четные.Замените их на квадрат этого числа.
+
+
+int[,] EvenNumbers(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            if(i % 2 == 0 && j % 2 == 0)
+           {
+              matrix[i, j] = matrix[i, j] * matrix[i, j];
+           }
+
+        }        
+    }
+    return matrix;
+}
+
+
+  int[,] CreateRandomMatrixint(int rows, int colums, int min,int max)
+
+  {
+     int[,] matrix = new int [rows,colums];
+     Random random = new Random();
+     for (int i = 0; i < rows; i++)
+     {
+        for (int j = 0; j < colums; j++)
+        {
+            matrix[i, j] = random.Next(min, max + 1);
+        }
+     }
+     return  matrix;
+  }
+
+  void PrintMatrix(int[,] matrix)
+  {
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            System.Console.Write(matrix[i, j] + " ");
+        }
+        System.Console.WriteLine();
+    }
+    
+  }
+
   
 
-  // Cоздание и заполнение двумерного массива.
+ System.Console.WriteLine("Input number of rows: ");
+ int rows = Convert.ToInt32(Console.ReadLine());
+ System.Console.WriteLine("Input number of colums: ");
+ int colums = Convert.ToInt32(Console.ReadLine());
+ System.Console.WriteLine("Input minimal value of array element: ");
+ int min = Convert.ToInt32(Console.ReadLine());
+ System.Console.WriteLine("Input maximal value of array element: ");
+ int max = Convert.ToInt32(Console.ReadLine());
 
-//   int[,] CreateRandomMatrixint(int rows, int colums, int min,int max)
-
-//   {
-//      int[,] matrix = new int [rows,colums];
-//      Random random = new Random();
-//      for (int i = 0; i < rows; i++)
-//      {
-//         for (int j = 0; j < colums; j++)
-//         {
-//             matrix[i, j] = random.Next(min, max + 1);
-//         }
-//      }
-//      return  matrix;
-//   }
-
-//   void PrintMatrix(int[,] matrix)
-//   {
-//     for (int i = 0; i < matrix.GetLength(0); i++)
-//     {
-//         for (int j = 0; j < matrix.GetLength(1); j++)
-//         {
-//             System.Console.Write(matrix[i, j] + " ");
-//         }
-//         System.Console.WriteLine();
-//     }
-//   }
-
-//   PrintMatrix(CreateRandomMatrixint(4, 4, 0, 9));
+int[,] matrix =  CreateRandomMatrixint(rows, colums, min, max);
+PrintMatrix(matrix);
+matrix = EvenNumbers(matrix);
+PrintMatrix(matrix);
