@@ -264,7 +264,7 @@
 
 // System.Console.WriteLine("Input number: ");
 //  int num = Convert.ToInt32(Console.ReadLine());
- 
+
 //  System.Console.WriteLine(DigitCounter(num));
 
 // Задайте массив из N случайных целых чисел
@@ -280,7 +280,7 @@
 // int[] InputArray(int size)
 // {
 //     int[] arr = new int [size];
-    
+
 //     for(int i = 0; i < arr.Length; i++)
 //     {
 //         System.Console.Write($"Input {i+1} number: ");
@@ -312,9 +312,9 @@
 
 //Заполните массив из N случайных чисел,(вводится с консоли  не более 8)
 // 0т 0 до 9.Сформируйте целое число,
- // которое будет состоять из чисел из массива.Старший разряд числа
- // находится на нулевом индексе, младший на последнем.
- // пример: [1 4 5 2 6] => 14526
+// которое будет состоять из чисел из массива.Старший разряд числа
+// находится на нулевом индексе, младший на последнем.
+// пример: [1 4 5 2 6] => 14526
 
 // int[] CreateRandomArray(int size)
 // {
@@ -417,3 +417,122 @@
 
 // int[,] matrix = CreateMatrix(5,8);
 // ShowMatrix(matrix);
+
+//Задача: Создать двумерный массив. Найти сумму цыфр числа.Вввести на экран
+// четные элементы массива.
+
+// using System.Data;
+
+// int[,] CreateMatrix (int rowCount, int columsCount)  //функция
+// {
+//     int[,] matrix = new int [rowCount,columsCount];
+
+//     Random random = new Random();
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             matrix[i, j] = random.Next(1, 1000);
+//         }    
+//     }
+//     return matrix;
+// }
+
+
+// void ShowMatrix(int[,] matrix)
+// {
+//    for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             Console.Write($"{matrix[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     } 
+
+// } 
+
+//  int[,] matrix = CreateMatrix(5, 4);
+//   ShowMatrix(matrix);
+
+//  foreach (int e in matrix)
+//  {
+//     if (IsInTerestihg(e) )
+//     {
+//         Console.WriteLine( e );       
+//     }
+//  }
+
+// bool IsInTerestihg(int value)
+// {
+//     int sumVidigits =  GetsumVidigits(value);
+//     if(sumVidigits % 2 == 0)
+//     {
+//         return true;
+//     }  
+//      return false; 
+// }   
+
+//   int GetsumVidigits(int value) // Функция для нахождения суммы цыфр числа
+//  {
+//     int sum = 0;
+//     while(value > 0)
+//     {
+//         sum = sum | value % 10;
+//         value = value / 10;
+//     }
+//     return sum;
+//  }
+   
+
+
+   //Cтроки в C#.
+
+//    string str = "Hello world!";
+//    Console.Write(str[0]);
+
+//Cоздание строки в С#.
+//  string s1 = "hello";
+
+//  char[] ch_array = { 'w', 'o', 'r', 'i', 'd'};
+//  string s2 = new String(ch_array);
+
+//  string s3 = new string('a', 6); // Результатом будет "аааааа"
+    
+//    string CreateString(string s) 
+//    {
+//         string Letters = "";
+//         foreach (char e in s)
+//         {
+//             if( char.IsAsciiLetter(e))
+//             {
+//                 Letters = Letters + e;
+//             }
+//         }
+//         return Letters;
+//    }
+
+//     string str = Console.ReadLine();
+//     string result = CreateString(str); 
+//     Console.WriteLine(result);
+    
+
+
+
+// public class Program
+// {
+//     public static void Main()
+//     {
+//         // Пример строки
+//         string inputString = "Hello, my name is John and I am 27 years old.";
+
+//         // Функция для поиска цифр
+//         string[] foundDigits = FindDigits(inputString);
+
+//         // Вывод результатов
+//         foreach (var digit in foundDigits)
+//         {
+//             Console.WriteLine(digit);
+//         }
+//     }
+// }
