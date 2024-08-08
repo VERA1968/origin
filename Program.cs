@@ -483,10 +483,10 @@
 //     }
 //     return sum;
 //  }
-   
 
 
-   //Cтроки в C#.
+
+//Cтроки в C#.
 
 //    string str = "Hello world!";
 //    Console.Write(str[0]);
@@ -498,7 +498,7 @@
 //  string s2 = new String(ch_array);
 
 //  string s3 = new string('a', 6); // Результатом будет "аааааа"
-    
+
 //    string CreateString(string s) 
 //    {
 //         string Letters = "";
@@ -515,7 +515,7 @@
 //     string str = Console.ReadLine();
 //     string result = CreateString(str); 
 //     Console.WriteLine(result);
-    
+
 
 
 
@@ -536,3 +536,82 @@
 //         }
 //     }
 // }
+
+
+// Бесконечный цикл. Остановка цикла.
+
+// while (true)
+// {
+//     Console.WriteLine("i am in joop!");
+//     break;
+// }
+
+
+// Задача:выдать на экран сообщение 
+// в случае наличия в массиве нечетного числа.
+
+// Console.WriteLine("Start");
+
+// int[] numbers = {2, 4, 6, 7, 8, 10};
+// foreach (int number in numbers)
+// {
+//     if (number % 2 == 1)
+//     {
+//         Console.WriteLine("There is odd number");
+//         break;
+//     }
+// }
+// Console.WriteLine("Stop");
+
+// Задача: Сообщить о наличии отрицательных элементах
+//  в строках двумерного массива.
+
+// int[,] table = {
+//     { 1, 1,  1},
+//     { 2, -2, 2},
+//     { 3, 3, -3} };
+
+// for (int i = 0; i < table.GetLength(0); i++) 
+// {
+//     for (int j = 0; j < table.GetLength(1); j++) 
+//     {
+//         if (table[i, j] < 0)
+//         {
+//             Console.WriteLine($"There are negative in line {i}");
+//             break;
+//         }
+
+//     }
+// }  
+  
+
+  // Cоздание и заполнение двумерного массива.
+
+//   int[,] CreateRandomMatrixint(int rows, int colums, int min,int max)
+
+//   {
+//      int[,] matrix = new int [rows,colums];
+//      Random random = new Random();
+//      for (int i = 0; i < rows; i++)
+//      {
+//         for (int j = 0; j < colums; j++)
+//         {
+//             matrix[i, j] = random.Next(min, max + 1);
+//         }
+//      }
+//      return  matrix;
+//   }
+
+//   void PrintMatrix(int[,] matrix)
+//   {
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             System.Console.Write(matrix[i, j] + " ");
+//         }
+//         System.Console.WriteLine();
+//     }
+//   }
+
+//   PrintMatrix(CreateRandomMatrixint(4, 4, 0, 9));
