@@ -591,63 +591,42 @@
 //индекса четные.Замените их на квадрат этого числа.
 
 
-int[,] EvenNumbers(int[,] matrix)
-{
-    for (int i = 0; i < matrix.GetLength(0); i++)
-    {
-        for (int j = 0; j < matrix.GetLength(1); j++)
-        {
-            if(i % 2 == 0 && j % 2 == 0)
-           {
-              matrix[i, j] = matrix[i, j] * matrix[i, j];
-           }
-
-        }        
-    }
-    return matrix;
-}
 
 
-  int[,] CreateRandomMatrixint(int rows, int colums, int min,int max)
+// Задача: Написать программу, которая из имеющегося массива
+//  строк формирует новый массив из строк, длина которых меньше,
+//   либо равна 3 символам. Первоначальный массив можно ввести с клавиатуры, 
+//   либо задать на старте выполнения алгоритма.
+//    При решении не рекомендуется пользоваться коллекциями,
+//  лучше обойтись исключительно массивами.
 
-  {
-     int[,] matrix = new int [rows,colums];
-     Random random = new Random();
-     for (int i = 0; i < rows; i++)
-     {
-        for (int j = 0; j < colums; j++)
-        {
-            matrix[i, j] = random.Next(min, max + 1);
-        }
-     }
-     return  matrix;
-  }
 
-  void PrintMatrix(int[,] matrix)
-  {
-    for (int i = 0; i < matrix.GetLength(0); i++)
-    {
-        for (int j = 0; j < matrix.GetLength(1); j++)
-        {
-            System.Console.Write(matrix[i, j] + " ");
-        }
-        System.Console.WriteLine();
-    }
-    
-  }
+
+
+
+
 
   
+    
+       
+string[] inputArray = new string[] { "aa", "bbbb", "c", "dddd", "e", "ff", "ggg", "hhhh", "iii", "jjj" };
 
- System.Console.WriteLine("Input number of rows: ");
- int rows = Convert.ToInt32(Console.ReadLine());
- System.Console.WriteLine("Input number of colums: ");
- int colums = Convert.ToInt32(Console.ReadLine());
- System.Console.WriteLine("Input minimal value of array element: ");
- int min = Convert.ToInt32(Console.ReadLine());
- System.Console.WriteLine("Input maximal value of array element: ");
- int max = Convert.ToInt32(Console.ReadLine());
+string[] shortStrings = new string[0];
+       
+for (int i = 0; i < inputArray.Length; i++)
+    {
+        if (inputArray[i].Length <= 3)
+        {
+            string[] temp = new string[shortStrings.Length + 1];
+            Array.Copy(shortStrings, temp, shortStrings.Length);
+            temp[shortStrings.Length] = inputArray[i];
+            shortStrings = temp;
+        }
+    }
 
-int[,] matrix =  CreateRandomMatrixint(rows, colums, min, max);
-PrintMatrix(matrix);
-matrix = EvenNumbers(matrix);
-PrintMatrix(matrix);
+       
+foreach (string s in shortStrings)
+{
+    Console.Write(s + " , ");
+}
+   
